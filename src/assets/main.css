@@ -1,7 +1,29 @@
 @import '@/assets/theme.css';
 
 @layer base {
+  :root {
+    /* spacing and sizing related */
+    --header-size: 50px;
+  }
+
   html {
     @apply bg-background text-over-bg font-ordinary;
   }
+
+  body {
+    @apply h-screen;
+  }
+
+  #app {
+    @apply h-screen px-8 py-4;
+  }
+}
+
+.head-height {
+  height: var(--header-size);
+}
+
+.stage-height {
+  min-height: calc(100vh - var(--header-size) - var(--spacing) * 4 * 2);
+  min-width: 100%;
 }

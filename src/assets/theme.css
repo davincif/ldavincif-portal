@@ -7,15 +7,16 @@
 
 @layer base {
   :root {
+    /* background realted */
     --background: #0e1a2d;
     --cta: #90fcdc;
 
-    /* meant for text */
+    /* text realted */
     --over-bg-flashy: #ced7f3;
     --over-bg: #8a93ad;
 
-    --flashy: 'font-["Manrope",_sans-serif]';
-    --ordinary: 'font-["JetBrains Mono", monospace]';
+    --flashy: 'Manrope', sans-serif;
+    --ordinary: 'JetBrains Mono', monospace;
   }
 }
 

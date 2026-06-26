@@ -23,8 +23,8 @@ const menus = ref([
 </script>
 
 <template>
-  <div class="flex items-center justify-between gap-2">
-    <HexagonIcon :size="50" label="DV" />
+  <div class="head-height flex items-center justify-between gap-2">
+    <HexagonIcon :size="50" label="L" />
 
     <span class="flex gap-12">
       <a

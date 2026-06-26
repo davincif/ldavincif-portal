@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-const props = defineProps({
+defineProps({
   size: {
     type: Number,
     default: 200,
@@ -44,10 +44,10 @@ const points = computed(() => {
 
 <template>
   <svg
+    :class="`text-${color}`"
     :width="size"
     :height="size"
     viewBox="0 0 200 200"
-    :class="`text-${color}`"
   >
     <polygon
       :points="points"

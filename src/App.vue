@@ -4,6 +4,10 @@ import Header from './components/header.vue';
 
 <template>
   <Header />
+
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped></style>
