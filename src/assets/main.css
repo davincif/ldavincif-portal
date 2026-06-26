@@ -1,1 +1,7 @@
 @import '@/assets/theme.css';
+
+@layer base {
+  html {
+    @apply bg-background text-over-bg font-ordinary;
+  }
+}

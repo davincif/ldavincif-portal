@@ -1,9 +1,31 @@
-@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&display=swap');
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@import 'tailwindcss';
+@import '@/assets/theme-davincif.css';
+
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
 
 @layer base {
   :root {
-    /* code */
+    --background: #0e1a2d;
+    --cta: #90fcdc;
+
+    /* meant for text */
+    --over-bg-flashy: #ced7f3;
+    --over-bg: #8a93ad;
+
+    --flashy: 'font-["Manrope",_sans-serif]';
+    --ordinary: 'font-["JetBrains Mono", monospace]';
   }
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-cta: var(--cta);
+
+  --color-over-bg-flashy: var(--over-bg-flashy);
+  --color-over-bg: var(--over-bg);
+
+  --font-flashy: var(--flashy);
+  --font-ordinary: var(--ordinary);
 }
