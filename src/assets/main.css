@@ -3,7 +3,7 @@
 @layer base {
   :root {
     /* spacing and sizing related */
-    --header-size: 50px;
+    --header-size: 82px;
   }
 
   html {
@@ -15,7 +15,7 @@
   }
 
   #app {
-    @apply h-screen px-8 py-4;
+    @apply h-screen px-8;
   }
 }
 
@@ -24,6 +24,15 @@
 }
 
 .stage-height {
-  min-height: calc(100vh - var(--header-size) - var(--spacing) * 4 * 2);
+  min-height: calc(100vh - var(--header-size));
   min-width: 100%;
+}
+
+.anchor-offset {
+  /*
+  when an anchor is used for this position, it
+  Offsets the scroll landing position by --header-size
+  on top of it.
+  */
+  scroll-margin-top: var(--header-size);
 }

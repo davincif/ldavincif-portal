@@ -17,7 +17,10 @@ const mailme = () => {
 </script>
 
 <template>
-  <div class="stage-height flex flex-col justify-center gap-8">
+  <section
+    id="who"
+    class="stage-height anchor-offset flex flex-col justify-center gap-8"
+  >
     <p class="font-ordinary text-cta text-xl">
       <slot name="salute"></slot>
     </p>
@@ -63,7 +66,7 @@ const mailme = () => {
         <hr class="w-[stretch] border-dashed" />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped></style>

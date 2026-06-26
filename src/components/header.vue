@@ -1,35 +1,20 @@
 <script setup lang="ts">
 import HexagonIcon from '@/icons/hexagonIcon.vue';
-import { ref } from 'vue';
-
-const menus = ref([
-  {
-    name: 'About',
-    achor: '#about',
-  },
-  {
-    name: 'Exprience',
-    achor: '#exprience',
-  },
-  {
-    name: 'Work',
-    achor: '#work',
-  },
-  {
-    name: 'Contact',
-    achor: '#contact',
-  },
-]);
+import MENUS from '@/models/headerMenus.model';
 </script>
 
 <template>
-  <div class="head-height flex items-center justify-between gap-2">
+  <div
+    class="head-height bg-background sticky top-0 flex items-center
+      justify-between gap-2"
+  >
     <HexagonIcon :size="50" label="L" />
 
     <span class="flex gap-12">
       <a
-        v-for="(menu, index) in menus"
+        v-for="(menu, index) in MENUS"
         class="text-over-bg-flashy text-lg font-semibold hover:cursor-pointer"
+        :href="`#${menu.achor}`"
       >
         <span class="text-cta font-bold">
           {{ String(index + 1).padStart(2, '0') }}.

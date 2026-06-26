@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Presentation from '@/components/presentation.vue';
+import WorkHistory from '@/components/workHistory.vue';
 </script>
 
 <template>
@@ -15,6 +16,8 @@ import Presentation from '@/components/presentation.vue';
       primis in faucibus. Sed gravida lacus in justo efficitur placerat.
     </template>
   </Presentation>
+
+  <WorkHistory />
 </template>
 
 <style scoped></style>
