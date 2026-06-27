@@ -6,11 +6,11 @@ export interface Experience {
   market: string[];
   consultingCompany?: string;
   techStack: string[];
-  highlight: string[];
+  highlights: string[];
   sumary: string;
   activities: string[];
   location: ExperienceLocation;
-  reguime: ExperienceRegime;
+  regime: ExperienceRegime;
   teamsize: CompanySizeRange;
   companySize: CompanySizeRange;
 }
@@ -47,7 +47,7 @@ const EXPERIENCES: Experience[] = [
     market: ['banking', 'financial'],
     consultingCompany: 'Decskills',
     techStack: ['vue', 'javascript'],
-    highlight: [
+    highlights: [
       'webcomponents',
       'microfrontend',
       'requirements gathering',
@@ -64,7 +64,7 @@ const EXPERIENCES: Experience[] = [
       city: 'Lisbon',
       country: 'Portugal',
     },
-    reguime: ExperienceRegime.HYBRID,
+    regime: ExperienceRegime.HYBRID,
     teamsize: {
       lowerRange: 5,
       upperRange: 10,
@@ -84,7 +84,7 @@ const EXPERIENCES: Experience[] = [
     market: ['banking', 'financial'],
     consultingCompany: 'Aubay',
     techStack: ['angular', 'stencil.js', 'javascript', 'typescript'],
-    highlight: [
+    highlights: [
       'microfrontend',
       'tech lead',
       'requirements gathering',
@@ -104,7 +104,7 @@ const EXPERIENCES: Experience[] = [
       city: 'Lisbon',
       country: 'Portugal',
     },
-    reguime: ExperienceRegime.REMOTE,
+    regime: ExperienceRegime.REMOTE,
     teamsize: {
       lowerRange: 4,
       upperRange: 10,
@@ -124,7 +124,12 @@ const EXPERIENCES: Experience[] = [
     market: ['automobile', 'manufacturing'],
     consultingCompany: 'Aubay',
     techStack: ['angular', 'typescript', 'jenkins'],
-    highlight: ['monolith', 'tech lead', 'software architecture', 'mentorship'],
+    highlights: [
+      'monolith',
+      'tech lead',
+      'software architecture',
+      'mentorship',
+    ],
     sumary:
       'Built highly specialized web tooling utilized directly by BMW manufacturing engineers during active production processes.',
     activities: [
@@ -136,7 +141,7 @@ const EXPERIENCES: Experience[] = [
       city: 'Lisbon',
       country: 'Portugal',
     },
-    reguime: ExperienceRegime.HYBRID,
+    regime: ExperienceRegime.HYBRID,
     teamsize: {
       lowerRange: 10,
       upperRange: 14,
@@ -156,7 +161,7 @@ const EXPERIENCES: Experience[] = [
     company: 'Aubay',
     market: ['software factory', 'consulting'],
     techStack: [],
-    highlight: ['tech validation', 'webinares presenter', 'mentorship'],
+    highlights: ['tech validation', 'webinares presenter', 'mentorship'],
     sumary:
       'At Aubay I mainly consulted for other companies while contributed with about to spread knowledge and training inside the company.',
     activities: [
@@ -169,7 +174,7 @@ const EXPERIENCES: Experience[] = [
       city: 'Lisbon',
       country: 'Portugal',
     },
-    reguime: ExperienceRegime.REMOTE,
+    regime: ExperienceRegime.REMOTE,
     teamsize: {
       lowerRange: 1,
       upperRange: 3,
@@ -189,7 +194,7 @@ const EXPERIENCES: Experience[] = [
     company: 'RedePos',
     market: ['entertainment', 'software factory'],
     techStack: ['angular', 'vue', 'typescript'],
-    highlight: ['software architecture', 'tech lead', 'microfrontend'],
+    highlights: ['software architecture', 'tech lead', 'microfrontend'],
     sumary:
       'Where I could lead a team in the development of a playfull web platform of significant finalcial impact at the company and at charity organizations, using hybrid web technologies; as well as working in the production of a large internal microfrontend CRM solution.',
     activities: [
@@ -204,7 +209,7 @@ const EXPERIENCES: Experience[] = [
       city: 'Recife',
       country: 'Brazil',
     },
-    reguime: ExperienceRegime.HYBRID,
+    regime: ExperienceRegime.HYBRID,
     teamsize: {
       lowerRange: 4,
       upperRange: 7,
@@ -234,7 +239,7 @@ const EXPERIENCES: Experience[] = [
       'electron',
       'typescript',
     ],
-    highlight: ['fullstack', 'tech lead', 'software architecture'],
+    highlights: ['fullstack', 'tech lead', 'software architecture'],
     sumary: '',
     activities: [
       'Developing desktop application using web stack technologies.',
@@ -249,7 +254,7 @@ const EXPERIENCES: Experience[] = [
       city: 'Recife',
       country: 'Brazil',
     },
-    reguime: ExperienceRegime.REMOTE,
+    regime: ExperienceRegime.REMOTE,
     teamsize: {
       lowerRange: 3,
       upperRange: 7,
@@ -278,7 +283,7 @@ const EXPERIENCES: Experience[] = [
       'docker',
       'IBM Chatbot',
     ],
-    highlight: ['fullstack'],
+    highlights: ['fullstack'],
     sumary:
       'I was to help the creating of their insurance streamlined ecosystem. But ufortunantely if was my one and only not very good working experience in life. If you wanna know me, reach out to me! =D',
     activities: [
@@ -291,7 +296,7 @@ const EXPERIENCES: Experience[] = [
       city: 'Recife',
       country: 'Brazil',
     },
-    reguime: ExperienceRegime.ON_SITE,
+    regime: ExperienceRegime.ON_SITE,
     teamsize: {
       upperRange: 3,
     },
@@ -317,7 +322,7 @@ const EXPERIENCES: Experience[] = [
       'angular',
       'typescript',
     ],
-    highlight: ['fullstack', 'freelancer', 'software architecture'],
+    highlights: ['fullstack', 'freelancer', 'software architecture'],
     sumary:
       "Nina! was a beautiful project in which I worked for, with the intent to give harassment victims a way to denounce it to the city's authority of Fortaleza, Brazil.",
     activities: [
@@ -330,7 +335,7 @@ const EXPERIENCES: Experience[] = [
       city: 'Recife',
       country: 'Brazil',
     },
-    reguime: ExperienceRegime.REMOTE,
+    regime: ExperienceRegime.REMOTE,
     teamsize: {
       upperRange: 3,
     },
@@ -356,7 +361,7 @@ const EXPERIENCES: Experience[] = [
       'ionic',
       'jenkins',
     ],
-    highlight: ['fullstack', 'software architecture'],
+    highlights: ['fullstack', 'software architecture'],
     sumary:
       "My first payed job! Where I worked for a PoC for the Sam's Club Wallmark line in Brazil. Working in small teams having to take care of the hole development cycle was such a great opportunity!",
     activities: [
@@ -370,7 +375,7 @@ const EXPERIENCES: Experience[] = [
       city: 'Recife',
       country: 'Brazil',
     },
-    reguime: ExperienceRegime.ON_SITE,
+    regime: ExperienceRegime.ON_SITE,
     teamsize: {
       upperRange: 8,
     },
@@ -388,7 +393,7 @@ const EXPERIENCES: Experience[] = [
     company: 'PraTu',
     market: ['retail', 'social'],
     techStack: ['angular', 'ionic', 'firebase', 'javascript'],
-    highlight: ['fullstack', 'entrepreneurship', 'software architecture'],
+    highlights: ['fullstack', 'entrepreneurship', 'software architecture'],
     sumary:
       'I Participated in the creating of the startup to build an app with a marketplace to sell food for the avarage income city workers at Recife',
     activities: [
@@ -399,7 +404,7 @@ const EXPERIENCES: Experience[] = [
       city: 'Recife',
       country: 'Brazil',
     },
-    reguime: ExperienceRegime.HYBRID,
+    regime: ExperienceRegime.HYBRID,
     teamsize: {
       upperRange: 14,
     },

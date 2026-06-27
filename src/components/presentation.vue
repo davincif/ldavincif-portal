@@ -2,7 +2,7 @@
 import GithubIcon from '@/icons/githubIcon.vue';
 import LinkedinIcon from '@/icons/linkedinIcon.vue';
 import MainlIcon from '@/icons/mainlIcon.vue';
-import Button from './button.vue';
+import Button from './UI/button.vue';
 
 defineProps({
   email: {
@@ -19,26 +19,28 @@ const mailme = () => {
 <template>
   <section
     id="who"
-    class="stage-height anchor-offset flex flex-col justify-center gap-8"
+    class="stage-height anchor-offset flex flex-col justify-between"
   >
-    <p class="font-ordinary text-cta text-xl">
-      <slot name="salute"></slot>
-    </p>
+    <div class="flex flex-col justify-center gap-8 pt-16">
+      <p class="font-ordinary text-cta text-xl">
+        <slot name="salute"></slot>
+      </p>
 
-    <p class="font-flashy text-over-bg-flashy text-8xl font-bold">
-      <slot name="dev-name"></slot>
-    </p>
+      <p class="font-flashy text-over-bg-flashy text-8xl font-bold">
+        <slot name="dev-name"></slot>
+      </p>
 
-    <p class="font-ordinary text-over-bg text-8xl font-bold">
-      <slot name="phrase"></slot>
-    </p>
+      <p class="font-ordinary text-over-bg text-8xl font-bold">
+        <slot name="phrase"></slot>
+      </p>
 
-    <p class="font-ordinary text-over-bg w-2/3 text-xl">
-      <slot name="pitch"></slot>
-    </p>
+      <p class="font-ordinary text-over-bg w-2/3 text-xl">
+        <slot name="pitch"></slot>
+      </p>
+    </div>
 
     <!-- SECTION FOOTER -->
-    <div class="mt-4 flex items-center gap-16">
+    <div class="flex items-center gap-16 pt-4 pb-16">
       <Button id="mailme-btn" @click="mailme()">Get in Touch</Button>
 
       <div class="text-cta flex w-full items-center gap-4">
