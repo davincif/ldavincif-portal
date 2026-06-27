@@ -37,6 +37,7 @@ const mailme = () => {
       <slot name="pitch"></slot>
     </p>
 
+    <!-- SECTION FOOTER -->
     <div class="mt-4 flex items-center gap-16">
       <Button id="mailme-btn" @click="mailme()">Get in Touch</Button>
 
