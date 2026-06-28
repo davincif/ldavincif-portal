@@ -5,8 +5,8 @@ import MENUS from '@/models/headerMenus.model';
 
 <template>
   <div
-    class="head-height bg-background sticky top-0 flex items-center
-      justify-between gap-2"
+    class="head-height bg-background fixed top-0 flex w-full items-center
+      justify-between gap-2 pr-16"
   >
     <HexagonIcon :size="50" label="L" />
 
