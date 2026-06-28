@@ -13,8 +13,13 @@ import MENUS from '@/models/headerMenus.model';
     <span class="flex gap-12">
       <a
         v-for="(menu, index) in MENUS"
-        class="text-over-bg-flashy text-lg font-semibold hover:cursor-pointer"
+        class="text-over-bg-flashy r text-lg font-semibold"
         :href="`#${menu.achor}`"
+        :class="
+          menu.isInConstruction
+            ? 'opacity-50 hover:cursor-not-allowed'
+            : 'hover:cursor-pointe'
+        "
       >
         <span class="text-cta font-bold">
           {{ String(index + 1).padStart(2, '0') }}.

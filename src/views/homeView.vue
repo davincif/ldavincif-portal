@@ -7,13 +7,17 @@ import WorkHistory from '@/components/workHistory.vue';
   <Presentation email="LDaVinciF.pt@gmail.com">
     <template v-slot:salute>Hi, my name is</template>
     <template v-slot:dev-name>Leonardo Da Vinci</template>
-    <template v-slot:phrase>I build things for the web.</template>
+    <template v-slot:phrase>I'm Software solutions maker.</template>
     <template v-slot:pitch>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut
-      massa at justo maximus fringilla. Nunc tincidunt iaculis lectus, a aliquam
-      dolor ultricies ac. Suspendisse nec cursus leo. Vestibulum ut mollis
-      libero, in placerat mauris. Interdum et malesuada fames ac ante ipsum
-      primis in faucibus. Sed gravida lacus in justo efficitur placerat.
+      For me, programming is all about diving into the "whys", it's more about
+      people than it is about computers, understanding what’s actually needed,
+      gives you a solid base to building something clean solid and reliable.
+      <br />
+      Professionally, I’ve worked mostly as a full-stack developer with Angular,
+      Python (Django), and Node/TypeScript (Express). Outside of work, I love
+      messing around with tools like C, Lua, Arduino, and Raspberry Pi just for
+      fun. To me, the tech matters a bunch; but it’s always a means to an end,
+      nothing more.
     </template>
   </Presentation>
 

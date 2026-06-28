@@ -1,4 +1,10 @@
-const MENUS = [
+export interface Menu {
+  name: string;
+  achor: string;
+  isInConstruction?: boolean;
+}
+
+const MENUS: Menu[] = [
   {
     name: 'who',
     achor: 'who',
@@ -10,10 +16,12 @@ const MENUS = [
   {
     name: 'skills',
     achor: 'skills',
+    isInConstruction: true,
   },
   {
     name: 'my story',
     achor: 'my-story',
+    isInConstruction: true,
   },
 ];
 

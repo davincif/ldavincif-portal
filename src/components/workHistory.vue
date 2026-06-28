@@ -1,20 +1,42 @@
 <script setup lang="ts">
-import EXPERIENCES, { ExperienceRegime } from '@/models/experiences.model';
+import EXPERIENCES, {
+  ExperienceRegime,
+  type Experience,
+} from '@/models/experiences.model';
+import { capitalize } from '@/utils/string.ts';
 import { computed, ref } from 'vue';
 import Bullet from './UI/bullet.vue';
 import Card from './UI/card.vue';
 
+const loadingStep = 3;
+
 /** from (start, end( — exclusive — index range */
 const experienceRange = ref({
   start: 0,
-  end: 4,
+  end: 3,
 });
 
 const expanded = ref(new Set<string>());
 
-const experiences = computed(() =>
-  EXPERIENCES.slice(experienceRange.value.start, experienceRange.value.end),
-);
+const experiences = computed<Experience[]>(() => {
+  const exps = JSON.parse(
+    JSON.stringify(
+      EXPERIENCES.slice(experienceRange.value.start, experienceRange.value.end),
+    ),
+  );
+
+  // capitalize bullets
+  for (const experience of exps) {
+    experience.highlights = experience.highlights
+      .map((highlight: string) => capitalize(highlight))
+      .sort();
+    experience.techStack = experience.techStack
+      .map((tech: string) => capitalize(tech))
+      .sort();
+  }
+
+  return exps;
+});
 
 const prettifyDate = (date: string) => {
   return new Date(date).toLocaleDateString('en-US', {
@@ -44,6 +66,34 @@ const toggleExpand = (id: string) => {
 };
 
 const isExpanded = (id: string) => expanded.value.has(id);
+
+const retractExperiences = () => {
+  if (experienceRange.value.end - loadingStep <= 0) {
+    return;
+  }
+
+  const newEnd = experienceRange.value.end - loadingStep;
+
+  // closig possible expanded experiences
+  for (let idx = experienceRange.value.end; idx > newEnd; idx--) {
+    const experiencesID = EXPERIENCES[idx]?.id;
+    if (experiencesID === undefined) {
+      continue;
+    }
+
+    expanded.value.delete(experiencesID);
+  }
+
+  experienceRange.value.end = newEnd;
+};
+
+const loadExperiences = () => {
+  if (experienceRange.value.end + loadingStep >= EXPERIENCES.length) {
+    experienceRange.value.end = EXPERIENCES.length;
+  } else {
+    experienceRange.value.end += loadingStep;
+  }
+};
 </script>
 
 <template>
@@ -136,6 +186,41 @@ const isExpanded = (id: string) => expanded.value.has(id);
     </Card>
 
     <!-- SECTION FOOTER -->
+    <section>
+      <button
+        class="flex w-full items-center gap-4 hover:cursor-pointer"
+        @click="retractExperiences()"
+        v-show="experienceRange.end - loadingStep > 0"
+      >
+        <div
+          class="text-cta bg-cta h-1 w-[stretch] rounded-tl-xs rounded-bl-xs
+            border"
+        />
+        <p class="min-w-fit text-2xl">⥣</p>
+        <div
+          class="text-cta bg-cta h-1 w-[stretch] rounded-tr-xs rounded-br-xs
+            border"
+        />
+      </button>
+
+      <button
+        class="flex w-full items-center gap-4 hover:cursor-pointer"
+        @click="loadExperiences()"
+        v-show="experienceRange.end < EXPERIENCES.length"
+      >
+        <div
+          class="text-cta bg-cta h-1 w-[stretch] rounded-tl-xs rounded-bl-xs
+            border"
+        />
+        <p class="min-w-fit text-2xl">⥥</p>
+        <div
+          class="text-cta bg-cta h-1 w-[stretch] rounded-tr-xs rounded-br-xs
+            border"
+        />
+      </button>
+    </section>
+
+    <!-- SECTION divider -->
     <hr class="text-cta mt-4 w-[stretch] border-dashed" />
   </section>
 </template>
