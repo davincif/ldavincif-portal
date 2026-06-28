@@ -10,10 +10,6 @@
     @apply bg-background text-over-bg font-ordinary;
   }
 
-  body {
-    @apply h-screen;
-  }
-
   #app {
     @apply h-screen px-8;
   }

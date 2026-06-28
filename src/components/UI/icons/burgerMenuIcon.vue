@@ -20,10 +20,10 @@ defineProps({
     fill="none"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      d="M3.75 5.25 3 6v12l.75.75h16.5L21 18V6l-.75-.75zm.75 2.446v9.554h15V7.695L12 14.514zm13.81-.946H5.69L12 12.486z"
-      fill="currentColor"
+      d="M5 8h8.75M5 12h14m-8.75 4H19"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </svg>
 </template>

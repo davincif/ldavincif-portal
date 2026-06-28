@@ -21,30 +21,36 @@ const mailme = () => {
     id="who"
     class="stage-height anchor-offset flex flex-col justify-between"
   >
-    <div class="flex flex-col justify-center gap-8 pt-16">
-      <p class="font-ordinary text-cta text-xl">
+    <div class="flex flex-col justify-center gap-8 pt-8">
+      <p class="font-ordinary text-cta text-md md:text-xl">
         <slot name="salute"></slot>
       </p>
 
-      <p class="font-flashy text-over-bg-flashy text-8xl font-bold">
+      <p class="font-flashy text-over-bg-flashy text-5xl font-bold md:text-8xl">
         <slot name="dev-name"></slot>
       </p>
 
-      <p class="font-ordinary text-over-bg text-8xl font-bold">
+      <p class="font-ordinary text-over-bg text-5xl font-bold md:text-8xl">
         <slot name="phrase"></slot>
       </p>
 
-      <p class="font-ordinary text-over-bg w-2/3 text-xl">
+      <p class="font-ordinary text-over-bg text-xl lg:w-2/3">
         <slot name="pitch"></slot>
       </p>
     </div>
 
     <!-- SECTION FOOTER -->
-    <div class="flex items-center gap-16 pt-4 pb-16">
-      <Button id="mailme-btn" @click="mailme()">Get in Touch</Button>
+    <div class="lg:flex-rows flex flex-col items-center gap-8 pt-4">
+      <div>
+        <p class="text-cta mb-2 block lg:hidden">{{ email }}</p>
+        <Button id="mailme-btn" @click="mailme()">Get in Touch</Button>
+      </div>
 
-      <div class="text-cta flex w-full items-center gap-4">
-        <p>{{ email }}</p>
+      <div
+        class="text-cta flex w-full items-center justify-center gap-4
+          lg:justify-start"
+      >
+        <p class="hidden lg:block">{{ email }}</p>
         <span class="flex w-fit items-center gap-2">
           <a
             id="linkedin-link"
@@ -66,7 +72,7 @@ const mailme = () => {
             <MainlIcon />
           </a>
         </span>
-        <hr class="w-[stretch] border-dashed" />
+        <hr class="hidden w-[stretch] border-dashed lg:block" />
       </div>
     </div>
   </section>

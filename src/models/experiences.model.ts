@@ -307,7 +307,7 @@ const EXPERIENCES: Experience[] = [
   {
     id: 'nina!',
     period: {
-      from: '2027-09-25',
+      from: '2017-09-25',
       to: '2018-01-26',
     },
     role: 'Software Developer',

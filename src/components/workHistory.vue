@@ -39,7 +39,7 @@ const experiences = computed<Experience[]>(() => {
 });
 
 const prettifyDate = (date: string) => {
-  return new Date(date).toLocaleDateString('en-US', {
+  return new Date(date).toLocaleDateString('en-GB', {
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
@@ -99,14 +99,16 @@ const loadExperiences = () => {
 <template>
   <section
     id="exprience"
-    class="stage-height anchor-offset flex flex-col gap-8 pt-16"
+    class="stage-height anchor-offset flex flex-col gap-8"
   >
     <p class="text-cta">My Expenriences</p>
 
     <Card v-for="experience of experiences" class="font-ordinary text-over-bg">
       <!-- SECTION - Role, Position, Company Date and Sight-->
-      <section class="flex items-center justify-between">
-        <div class="flex flex-col">
+      <section
+        class="flex flex-col items-center justify-between gap-2 lg:flex-row"
+      >
+        <div class="flex w-full flex-col">
           <p class="text-over-bg-flashy text-lg font-bold">
             {{ experience.role }}
           </p>
@@ -132,7 +134,7 @@ const loadExperiences = () => {
           </p>
         </div>
 
-        <div class="text-right">
+        <div class="w-full text-left lg:w-fit lg:text-right">
           <p v-if="experience.period.to">
             {{ prettifyDate(experience.period.to) }}
           </p>
@@ -150,11 +152,17 @@ const loadExperiences = () => {
 
       <!-- SECTION - Skills -->
       <section class="flex flex-col gap-2">
-        <div v-if="experience.techStack.length > 0" class="flex gap-2">
+        <div
+          v-if="experience.techStack.length > 0"
+          class="flex flex-wrap gap-2"
+        >
           <Bullet v-for="tech in experience.techStack">{{ tech }}</Bullet>
         </div>
 
-        <div v-if="experience.highlights.length > 0" class="flex gap-2">
+        <div
+          v-if="experience.highlights.length > 0"
+          class="flex flex-wrap gap-2"
+        >
           <Bullet
             v-for="highlight in experience.highlights"
             color="over-bg-flashy"
@@ -165,7 +173,7 @@ const loadExperiences = () => {
       </section>
 
       <!-- SECTION - activitie details -->
-      <section v-show="isExpanded(experience.id)" class="">
+      <section v-show="isExpanded(experience.id)">
         <ul class="ml-4 flex list-[circle] flex-col gap-1">
           <li v-for="activitie in experience.activities">
             {{ activitie }}
@@ -193,13 +201,11 @@ const loadExperiences = () => {
         v-show="experienceRange.end - loadingStep > 0"
       >
         <div
-          class="text-cta bg-cta h-1 w-[stretch] rounded-tl-xs rounded-bl-xs
-            border"
+          class="text-cta bg-cta h-1 w-full rounded-tl-xs rounded-bl-xs border"
         />
         <p class="min-w-fit text-2xl">⥣</p>
         <div
-          class="text-cta bg-cta h-1 w-[stretch] rounded-tr-xs rounded-br-xs
-            border"
+          class="text-cta bg-cta h-1 w-full rounded-tr-xs rounded-br-xs border"
         />
       </button>
 
@@ -209,13 +215,11 @@ const loadExperiences = () => {
         v-show="experienceRange.end < EXPERIENCES.length"
       >
         <div
-          class="text-cta bg-cta h-1 w-[stretch] rounded-tl-xs rounded-bl-xs
-            border"
+          class="text-cta bg-cta h-1 w-full rounded-tl-xs rounded-bl-xs border"
         />
         <p class="min-w-fit text-2xl">⥥</p>
         <div
-          class="text-cta bg-cta h-1 w-[stretch] rounded-tr-xs rounded-br-xs
-            border"
+          class="text-cta bg-cta h-1 w-full rounded-tr-xs rounded-br-xs border"
         />
       </button>
     </section>
