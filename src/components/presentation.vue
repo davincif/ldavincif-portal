@@ -26,7 +26,7 @@ const mailme = () => {
         <slot name="salute"></slot>
       </p>
 
-      <p class="font-flashy text-over-bg-flashy text-5xl font-bold md:text-8xl">
+      <p class="font-flashy text-over-bg-flashy text-6xl font-bold md:text-9xl">
         <slot name="dev-name"></slot>
       </p>
 

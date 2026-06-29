@@ -3,10 +3,12 @@ import EXPERIENCES, {
   ExperienceRegime,
   type Experience,
 } from '@/models/experiences.model';
+import { prettifyDate } from '@/utils/date.ts';
 import { capitalize } from '@/utils/string.ts';
 import { computed, ref } from 'vue';
 import Bullet from './UI/bullet.vue';
 import Card from './UI/card.vue';
+import Vonlunteering from './vonlunteering.vue';
 
 const loadingStep = 3;
 
@@ -37,14 +39,6 @@ const experiences = computed<Experience[]>(() => {
 
   return exps;
 });
-
-const prettifyDate = (date: string) => {
-  return new Date(date).toLocaleDateString('en-GB', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  });
-};
 
 const translateRegime = (regime: ExperienceRegime) => {
   switch (regime) {
@@ -141,6 +135,7 @@ const loadExperiences = () => {
           <p v-else="experience.period.to" class="text-cta font-bold">
             current
           </p>
+
           <p>{{ prettifyDate(experience.period.from) }}</p>
         </div>
       </section>
@@ -223,6 +218,8 @@ const loadExperiences = () => {
         />
       </button>
     </section>
+
+    <Vonlunteering />
 
     <!-- SECTION divider -->
     <hr class="text-cta mt-4 w-[stretch] border-dashed" />

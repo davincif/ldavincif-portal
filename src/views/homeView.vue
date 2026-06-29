@@ -14,11 +14,22 @@ import WorkHistory from '@/components/workHistory.vue';
         people than it is about computers, understanding what’s actually needed,
         gives you a solid base to building something clean and reliable.
         <br />
-        Professionally, I’ve worked mostly as a full-stack developer with
-        Angular, Python (Django), and Node/TypeScript (Express). Outside of
-        work, I love messing around with tools like C, Lua, Arduino, and
-        Raspberry Pi just for fun. To me, the tech matters a bunch; but it’s
-        always a means to an end, nothing more.
+        Professionally, I’ve worked mostly as a
+        <section class="text-cta inline-block">full stack</section>
+        developer with
+        <section class="text-cta inline-block">
+          Angular, Python (Django)
+        </section>
+        and
+        <section class="text-cta inline-block">
+          Node/TypeScript (Express)
+        </section>
+        . Outside of work, I love messing around with tools like
+        <section class="text-over-bg-flashy inline-block">C, Lua</section>
+        and
+        <section class="text-over-bg-flashy inline-block">Raspberry Pi</section>
+        just for fun. To me, the tech matters a bunch; but it’s always a means
+        to an end, nothing more.
       </template>
     </Presentation>
 

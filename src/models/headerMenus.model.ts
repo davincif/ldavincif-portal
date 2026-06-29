@@ -18,11 +18,20 @@ const MENUS: Menu[] = [
     achor: 'skills',
     isInConstruction: true,
   },
+  // {
+  //   name: 'volunteering',
+  //   achor: 'volunteering',
+  // },
   {
     name: 'my story',
     achor: 'my-story',
     isInConstruction: true,
   },
+  // {
+  //   name: 'projects',
+  //   achor: 'projects',
+  //   isInConstruction: true,
+  // },
 ];
 
 export default MENUS;
