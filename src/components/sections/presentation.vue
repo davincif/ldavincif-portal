@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import Button from '@/components/UI/button.vue';
 import GithubIcon from '@/icons/githubIcon.vue';
 import LinkedinIcon from '@/icons/linkedinIcon.vue';
 import MainlIcon from '@/icons/mainlIcon.vue';
-import Button from './UI/button.vue';
 
 defineProps({
   email: {

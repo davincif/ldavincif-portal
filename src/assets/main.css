@@ -30,5 +30,5 @@
   Offsets the scroll landing position by --header-size
   on top of it.
   */
-  scroll-margin-top: var(--header-size);
+  scroll-margin-top: calc(var(--header-size) + var(--spacing) * 8);
 }

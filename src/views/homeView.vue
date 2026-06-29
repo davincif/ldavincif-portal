@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import Presentation from '@/components/presentation.vue';
-import WorkHistory from '@/components/workHistory.vue';
+import Presentation from '@/components/sections/presentation.vue';
+import Skills from '@/components/sections/skills.vue';
+import WorkHistory from '@/components/sections/workHistory.vue';
 </script>
 
 <template>
-  <dev class="flex flex-col gap-16">
+  <dev class="flex flex-col gap-16 pb-24">
     <Presentation email="LDaVinciF.pt@gmail.com">
       <template v-slot:salute>Hi, my name is</template>
       <template v-slot:dev-name>Leonardo Da Vinci</template>
@@ -34,6 +35,8 @@ import WorkHistory from '@/components/workHistory.vue';
     </Presentation>
 
     <WorkHistory />
+
+    <Skills />
   </dev>
 </template>
 

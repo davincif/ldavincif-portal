@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import Bullet from '@/components/UI/bullet.vue';
+import Card from '@/components/UI/card.vue';
+import Vonlunteering from '@/components/vonlunteering.vue';
 import EXPERIENCES, {
   ExperienceRegime,
   type Experience,
@@ -6,9 +9,6 @@ import EXPERIENCES, {
 import { prettifyDate } from '@/utils/date.ts';
 import { capitalize } from '@/utils/string.ts';
 import { computed, ref } from 'vue';
-import Bullet from './UI/bullet.vue';
-import Card from './UI/card.vue';
-import Vonlunteering from './vonlunteering.vue';
 
 const loadingStep = 3;
 
