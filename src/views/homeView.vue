@@ -12,9 +12,9 @@ import WorkHistory from '@/components/sections/workHistory.vue';
       <template v-slot:dev-name>Leonardo Da Vinci</template>
       <template v-slot:phrase>I'm a software solutions maker.</template>
       <template v-slot:pitch>
-        For me, programming is all about diving into the "whys", it's more about
-        people than it is about computers, understanding what’s actually needed,
-        gives you a solid base to building something clean and reliable.
+        Programming is about diving into the "whys." It is more about people
+        than computers—understanding what is truly needed provides a solid
+        foundation for building clean and reliable solutions.
         <br />
         Professionally, I’ve worked mostly as a
         <section class="text-cta inline-block">full stack</section>
@@ -26,12 +26,12 @@ import WorkHistory from '@/components/sections/workHistory.vue';
         <section class="text-cta inline-block">
           Node/TypeScript (Express)
         </section>
-        . Outside of work, I love messing around with tools like
+        . Outside of work, I enjoy tinkering with tools like
         <section class="text-over-bg-flashy inline-block">C, Lua</section>
         and
         <section class="text-over-bg-flashy inline-block">Raspberry Pi</section>
-        just for fun. To me, the tech matters a bunch; but it’s always a means
-        to an end, nothing more.
+        for fun. While technology is highly important, to me, it is always a
+        means to an end.
       </template>
     </Presentation>
 

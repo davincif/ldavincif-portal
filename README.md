@@ -62,7 +62,7 @@ docker run -d -p 0.0.0.0:8080:8080/tcp --name ldavincif-portal-1 ldavincif/ldavi
 sudo docker stop $(sudo docker ps -aq) && sudo docker rm $(sudo docker ps -aq)
 
 # or all together
-sudo docker stop $(sudo docker ps -aq) && sudo docker rm $(sudo docker ps -aq) && sudo docker run -d -p 0.0.0.0:8080:8080/tcp --name ldavincif-portal-1 ldavincif/ldavincif-portal
+sudo docker build --network=host -t ldavincif/ldavincif-portal . && sudo docker stop $(sudo docker ps -aq) && sudo docker rm $(sudo docker ps -aq) && sudo docker run -d -p 0.0.0.0:8080:8080/tcp --name ldavincif-portal-1 ldavincif/ldavincif-portal
 ```
 
 ### Kubernetes
