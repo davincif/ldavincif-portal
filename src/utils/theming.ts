@@ -1,4 +1,4 @@
-export type Themes = 'default' | 'light' | 'terminal' | 'retro-light';
+export type Themes = 'default' | 'mylight' | 'terminal' | 'retro-light';
 
 export function changeTheme(newTheme: Themes) {
   const html = document.getElementsByTagName('html')[0];

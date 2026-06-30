@@ -3,7 +3,7 @@
 /* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
 
 @layer base {
-  html[data-theme='light'] {
+  html[data-theme='mylight'] {
     --footer-bg: #d8dccf;
     --background: #f3f1e8;
     --cta: #0b8f63;

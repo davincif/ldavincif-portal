@@ -6,28 +6,20 @@ import Selector from '@/components/UI/selector.vue';
 import HexagonIcon from '@/icons/hexagonIcon.vue';
 import MENUS from '@/models/headerMenus.model';
 import { changeTheme, type Themes } from '@/utils/theming';
+import { ref } from 'vue';
 
 const themes: SelectOptions[] = [
-  {
-    value: 'default',
-    label: 'Default ',
-  },
-  {
-    value: 'light',
-    label: 'Light',
-  },
-  {
-    value: 'terminal',
-    label: 'Terminal',
-  },
-  {
-    value: 'retro-light',
-    label: 'Retro Light',
-  },
+  { value: 'default', label: 'Default ' },
+  { value: 'mylight', label: 'Light' },
+  { value: 'terminal', label: 'Terminal' },
+  { value: 'retro-light', label: 'Retro Light' },
 ];
 
-const updateTheme = (theme: string) => {
-  changeTheme(theme as Themes);
+const theme = ref('default');
+
+const updateTheme = (newTheme: string) => {
+  theme.value = themes.find((_theme) => _theme.value === newTheme)?.label ?? '';
+  changeTheme(newTheme as Themes);
 };
 </script>
 
@@ -42,7 +34,7 @@ const updateTheme = (theme: string) => {
         class="w-25"
         :options="themes"
         id="theme-selector"
-        label-msg="Theme"
+        :label-msg="theme"
         @update:selected="updateTheme"
       />
     </div>
