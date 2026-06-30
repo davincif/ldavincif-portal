@@ -81,7 +81,7 @@ const SKILLS: MySkill[] = [
       { name: 'Unity', level: 2 },
       { name: 'Godot', level: 2 },
       { name: 'GDScript', level: 4 },
-      { name: 'Raspbarry', level: 2 },
+      { name: 'Raspberry', level: 2 },
       { name: 'Kubernetes', level: 1 },
 
       { name: 'bash script', level: 2 },

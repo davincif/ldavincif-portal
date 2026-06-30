@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ldavincif-portal-service
+  labels:
+    app: ldavincif-portal
+spec:
+  type: ClusterIP # Or LoadBalancer, NodePort
+  selector:
+    app: ldavincif-portal
+  ports:
+    - port: 8080 # Port exposed by the service
+      targetPort: 8080 # Container port
+      protocol: TCP
+      name: http

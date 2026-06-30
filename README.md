@@ -46,3 +46,17 @@ npm run build
 ```sh
 npm run test:unit
 ```
+
+### Build docker image
+
+```sh
+# after building the project run
+docker build --network=host -t ldavincif/ldavincif-portal .
+
+# then, to run it
+docker run -d -p 0.0.0.0:8080:8080/tcp --name ldavincif-portal-1 ldavincif/ldavincif-portal
+```
+
+### Kubernetes
+
+NOT TESTED!
