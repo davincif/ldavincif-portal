@@ -220,9 +220,6 @@ const loadExperiences = () => {
     </section>
 
     <Vonlunteering />
-
-    <!-- SECTION divider -->
-    <hr class="text-cta mt-4 w-[stretch] border-dashed" />
   </section>
 </template>
 

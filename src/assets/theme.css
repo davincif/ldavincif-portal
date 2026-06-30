@@ -8,6 +8,7 @@
 @layer base {
   :root {
     /* background realted */
+    --footer-bg: #273549;
     --background: #0e1a2d;
     --cta: #90fcdc;
 
@@ -21,6 +22,7 @@
 }
 
 @theme {
+  --color-footer-bg: var(--footer-bg);
   --color-background: var(--background);
   --color-cta: var(--cta);
 

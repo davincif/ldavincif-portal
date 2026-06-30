@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Footer from '@/components/sections/footer.vue';
 import Presentation from '@/components/sections/presentation.vue';
 import Skills from '@/components/sections/skills.vue';
 import WorkHistory from '@/components/sections/workHistory.vue';
@@ -35,9 +36,12 @@ import WorkHistory from '@/components/sections/workHistory.vue';
     </Presentation>
 
     <WorkHistory />
+    <hr class="text-cta mt-4 w-[stretch] border-dashed" />
 
     <Skills />
   </dev>
+
+  <Footer />
 </template>
 
 <style scoped></style>
