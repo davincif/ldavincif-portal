@@ -13,6 +13,7 @@ export interface Experience {
   regime: ExperienceRegime;
   teamsize: CompanySizeRange;
   companySize: CompanySizeRange;
+  removeFromYearOfExperience?: boolean;
 }
 
 export interface ExperiencePeriod {
@@ -411,6 +412,7 @@ const EXPERIENCES: Experience[] = [
     companySize: {
       upperRange: 14,
     },
+    removeFromYearOfExperience: true,
   },
 ];
 

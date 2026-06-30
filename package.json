@@ -10,7 +10,8 @@
     "test:unit": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "zip": "zip -r ./dist/ldavincif-portal.zip . -x \"node_modules/*\" \".vscode/*\" \"trash/*\" \".git/*\" \"dist/*\""
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.1",

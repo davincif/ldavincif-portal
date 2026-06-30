@@ -40,6 +40,19 @@ const experiences = computed<Experience[]>(() => {
   return exps;
 });
 
+const yearsOfExperience = computed(() => {
+  const today = new Date().getFullYear();
+  let firstExperience = Math.min(
+    ...EXPERIENCES.map((experience) =>
+      experience.removeFromYearOfExperience
+        ? Infinity
+        : Number(experience.period.from.split('-')[0]),
+    ),
+  );
+
+  return today - firstExperience;
+});
+
 const translateRegime = (regime: ExperienceRegime) => {
   switch (regime) {
     case ExperienceRegime.HYBRID:
@@ -95,7 +108,7 @@ const loadExperiences = () => {
     id="exprience"
     class="stage-height anchor-offset flex flex-col gap-8"
   >
-    <p class="text-cta">My Expenriences</p>
+    <p class="text-cta">My {{ yearsOfExperience }} years Expenriences</p>
 
     <Card v-for="experience of experiences" class="font-ordinary text-over-bg">
       <!-- SECTION - Role, Position, Company Date and Sight-->
