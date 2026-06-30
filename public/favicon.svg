@@ -1,4 +1,5 @@
-<svg width="32"
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="32"
     height="32"
     viewBox="0 0 200 200">
     <polygon points="100,10 180,50 180,150 100,190 20,150 20,50"

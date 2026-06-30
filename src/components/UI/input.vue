@@ -9,6 +9,7 @@ defineProps({
   },
   id: {
     type: String,
+    requeired: true,
   },
   placeholder: {
     type: String,

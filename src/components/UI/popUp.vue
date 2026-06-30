@@ -12,6 +12,8 @@ const props = defineProps({
   },
 });
 
+const emits = defineEmits(['close']);
+
 watch(
   () => props.isShown,
   (newIsShownState) => {
@@ -24,8 +26,6 @@ watch(
     }
   },
 );
-
-const emits = defineEmits(['close']);
 
 onUnmounted(() => {
   window.removeEventListener('click', checkForClickOutside);

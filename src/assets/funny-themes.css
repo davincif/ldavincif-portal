@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
+
+@layer base {
+  html[data-theme='light'] {
+    --footer-bg: #d8dccf;
+    --background: #f3f1e8;
+    --cta: #0b8f63;
+
+    /* text */
+    --over-bg-flashy: #1d2735;
+    --over-bg: #596273;
+  }
+
+  html[data-theme='terminal'] {
+    --footer-bg: #08140d;
+    --background: #020a05;
+    --cta: #47ff8a;
+
+    /* text */
+    --over-bg-flashy: #c8ffd9;
+    --over-bg: #71c790;
+  }
+
+  html[data-theme='retro-light'] {
+    --footer-bg: #b7c7a3;
+    --background: #d9e6be;
+    --cta: #255f38;
+
+    --over-bg-flashy: #203223;
+    --over-bg: #4a634d;
+  }
+}
