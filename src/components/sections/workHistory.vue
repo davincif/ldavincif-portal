@@ -108,7 +108,7 @@ const loadExperiences = () => {
     id="exprience"
     class="stage-height anchor-offset flex flex-col gap-8"
   >
-    <p class="text-cta">My {{ yearsOfExperience }} years Expenriences</p>
+    <p class="text-cta">My {{ yearsOfExperience }} years Experiences</p>
 
     <Card v-for="experience of experiences" class="font-ordinary text-over-bg">
       <!-- SECTION - Role, Position, Company Date and Sight-->
