@@ -13,10 +13,11 @@ export const MAX_SKILL_LEVEL = 5;
 
 const SKILLS: MySkill[] = [
   {
-    id: 'resume',
-    name: 'resume',
+    id: 'summary',
+    name: 'summary',
     skills: [
       { name: 'front-end for web', level: 5 },
+      { name: 'full-stack for web', level: 3 },
       { name: 'back-end for web', level: 3 },
       { name: 'linux', level: 2 },
       { name: 'games', level: 1 },

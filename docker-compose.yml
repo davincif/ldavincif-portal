@@ -1,0 +1,10 @@
+services:
+  ldavincif-portal:
+    build: .
+    image: ldavincif/ldavincif-portal
+    container_name: ldavincif-portal
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    security_opt:
+      - no-new-privileges:true
