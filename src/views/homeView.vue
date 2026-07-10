@@ -35,10 +35,10 @@ import WorkHistory from '@/components/sections/workHistory.vue';
       </template>
     </Presentation>
 
-    <WorkHistory />
+    <Skills />
     <hr class="text-cta mt-4 w-[stretch] border-dashed" />
 
-    <Skills />
+    <WorkHistory />
   </dev>
 
   <Footer />

@@ -105,7 +105,7 @@ const loadExperiences = () => {
 
 <template>
   <section
-    id="exprience"
+    id="experience"
     class="stage-height anchor-offset flex flex-col gap-8"
   >
     <p class="text-cta">My {{ yearsOfExperience }} years Experiences</p>

@@ -10,12 +10,12 @@ const MENUS: Menu[] = [
     achor: 'who',
   },
   {
-    name: 'exprience',
-    achor: 'exprience',
-  },
-  {
     name: 'skills',
     achor: 'skills',
+  },
+  {
+    name: 'experiences',
+    achor: 'experiences',
   },
   {
     name: 'my story',
