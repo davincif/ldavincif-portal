@@ -79,6 +79,7 @@ const SKILLS: MySkill[] = [
       { name: 'css / scss', level: 5 },
       { name: 'tailwind', level: 5 },
       { name: 'angular', level: 5 },
+      { name: 'git', level: 4 },
       { name: 'vue', level: 4 },
       { name: 'react', level: 3 },
       { name: 'stencil.js', level: 2 },
