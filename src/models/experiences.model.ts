@@ -84,7 +84,7 @@ const EXPERIENCES: Experience[] = [
     company: 'Santander',
     market: ['banking', 'financial'],
     consultingCompany: 'Aubay',
-    techStack: ['angular', 'stencil.js', 'javascript', 'typescript'],
+    techStack: ['angular', 'rxjs', 'stencil.js', 'javascript', 'typescript'],
     highlights: [
       'microfrontend',
       'tech lead',
@@ -124,7 +124,7 @@ const EXPERIENCES: Experience[] = [
     company: 'Critical Techworks',
     market: ['automobile', 'manufacturing'],
     consultingCompany: 'Aubay',
-    techStack: ['angular', 'typescript', 'jenkins'],
+    techStack: ['angular', 'rxjs', 'typescript', 'jenkins'],
     highlights: [
       'monolith',
       'tech lead',
@@ -194,7 +194,7 @@ const EXPERIENCES: Experience[] = [
     role: 'Senior Software Dev',
     company: 'RedePos',
     market: ['entertainment', 'software factory'],
-    techStack: ['angular', 'vue', 'typescript'],
+    techStack: ['angular', 'rxjs', 'vue', 'typescript'],
     highlights: ['software architecture', 'tech lead', 'microfrontend'],
     sumary:
       'Where I could lead a team in the development of a playfull web platform of significant finalcial impact at the company and at charity organizations, using hybrid web technologies; as well as working in the production of a large internal microfrontend CRM solution.',
@@ -237,6 +237,7 @@ const EXPERIENCES: Experience[] = [
       'rabbitMQ',
       'react',
       'angular',
+      'rxjs',
       'electron',
       'typescript',
     ],
@@ -276,6 +277,7 @@ const EXPERIENCES: Experience[] = [
     techStack: [
       'node',
       'angular',
+      'rxjs',
       'express',
       'postgress',
       'mongoDB',

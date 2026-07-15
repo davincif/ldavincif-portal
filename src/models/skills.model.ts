@@ -75,6 +75,7 @@ const SKILLS: MySkill[] = [
       { name: 'javascript', level: 5 },
       { name: 'typescript', level: 5 },
       { name: 'HTML', level: 5 },
+      { name: 'RxJS', level: 5 },
       { name: 'css / scss', level: 5 },
       { name: 'tailwind', level: 5 },
       { name: 'angular', level: 5 },
