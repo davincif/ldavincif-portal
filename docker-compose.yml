@@ -1,6 +1,8 @@
 services:
   ldavincif-portal:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: ldavincif/ldavincif-portal
     container_name: ldavincif-portal
     restart: unless-stopped

@@ -1,0 +1,44 @@
+name: Deploy
+run-name: ${{ gitea.actor }} is testing out Gitea Actions 🚀
+on:
+  push:
+    branches:
+      - main
+  # pull_request:
+  #   branches:
+  #     - main
+
+jobs:
+  Explore-Gitea-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ gitea.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by Gitea!"
+      - run: echo "🔎 The name of your branch is ${{ gitea.ref }} and your repository is ${{ gitea.repository }}."
+
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Copy project files to Pi 4
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.PI4_HOST }}
+          username: ${{ secrets.PI4_USER }}
+          key: ${{ secrets.PI4_SSH_KEY }}
+          source: '.'
+          target: '~/ldavincif-portal-deploy-temp'
+          rm: true # Cleans the target folder before copying
+      - name: Deploy and clean up on Pi 4
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.PI4_HOST }}
+          username: ${{ secrets.PI4_USER }}
+          key: ${{ secrets.PI4_SSH_KEY }}
+          script: |
+            cd ~/ldavincif-portal-deploy-temp
+            # docker compose down || true
+            sudo docker compose up -d --build
+            sudo docker image prune -f
+
+            # Clean up source files, keeping only running containers
+            cd ~
+            rm -rf ~/ldavincif-portal-deploy-temp
