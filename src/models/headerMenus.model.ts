@@ -18,6 +18,10 @@ const MENUS: Menu[] = [
     achor: 'experiences',
   },
   {
+    name: 'projects',
+    achor: 'projects',
+  },
+  {
     name: 'my story',
     achor: 'my-story',
     isInConstruction: true,

@@ -110,7 +110,11 @@ const loadExperiences = () => {
   >
     <p class="text-cta">My {{ yearsOfExperience }} years Experiences</p>
 
-    <Card v-for="experience of experiences" class="font-ordinary text-over-bg">
+    <Card
+      v-for="experience of experiences"
+      class="font-ordinary text-over-bg smooth-collapse"
+      :class="isExpanded(experience.id) ? 'max-h-min' : 'max-h-fit'"
+    >
       <!-- SECTION - Role, Position, Company Date and Sight-->
       <section
         class="flex flex-col items-center justify-between gap-2 lg:flex-row"
@@ -236,4 +240,8 @@ const loadExperiences = () => {
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.smooth-collapse {
+  transition: max-height 1000ms ease;
+}
+</style>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Footer from '@/components/sections/footer.vue';
 import Presentation from '@/components/sections/presentation.vue';
+import Projects from '@/components/sections/projects.vue';
 import Skills from '@/components/sections/skills.vue';
 import WorkHistory from '@/components/sections/workHistory.vue';
 </script>
@@ -10,7 +11,7 @@ import WorkHistory from '@/components/sections/workHistory.vue';
     <Presentation email="LDaVinciF.pt@gmail.com">
       <template v-slot:salute>Hi, my name is</template>
       <template v-slot:dev-name>Leonardo Da Vinci</template>
-      <template v-slot:phrase>I'm a software solutions maker.</template>
+      <template v-slot:phrase>I'm a software solutions maker</template>
       <template v-slot:pitch>
         Programming is about diving into the "whys." It is more about people
         than computers—understanding what is truly needed provides a solid
@@ -39,6 +40,8 @@ import WorkHistory from '@/components/sections/workHistory.vue';
     <hr class="text-cta mt-4 w-[stretch] border-dashed" />
 
     <WorkHistory />
+
+    <Projects />
   </dev>
 
   <Footer />

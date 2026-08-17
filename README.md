@@ -54,7 +54,7 @@ npm run test:unit
 docker build --network=host -t ldavincif/ldavincif-portal .
 
 # then, to run it
-docker run -d -p 0.0.0.0:8080:8080/tcp --name ldavincif-portal-1 ldavincif/ldavincif-portal
+docker run -d -p 0.0.0.0:8080:8080/tcp --name ldavincif-portal ldavincif/ldavincif-portal
 ```
 
 ```sh
